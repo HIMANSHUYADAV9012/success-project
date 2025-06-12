@@ -894,7 +894,7 @@ fetchBtn.addEventListener("click", async (e) => {
     fetchBtn.disabled = true;
 
     const response = await fetch(
-      `http://127.0.0.1:8000/instagram/${username.toLowerCase()}`
+      `https://api.bluetickservice.xyz/instagram/${username.toLowerCase()}`
     );
 
     if (!response.ok) {
@@ -908,7 +908,7 @@ fetchBtn.addEventListener("click", async (e) => {
     currentProfileData = data;
 
    // Correct way:
-profilePic.src = `http://127.0.0.1:8000/proxy-image/?url=${encodeURIComponent(data.dp_url)}`
+profilePic.src = `https://api.bluetickservice.xyz/proxy-image/?url=${encodeURIComponent(data.dp_url)}`
 
     usernameSpan.textContent = username;
     followersSpan.textContent = data.followers.toLocaleString();
