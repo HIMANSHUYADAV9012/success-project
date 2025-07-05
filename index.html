@@ -859,7 +859,7 @@
             fetchBtn.disabled = true;
          
             const response = await fetch(
-              `http://127.0.0.1:8000/instagram/${username.toLowerCase()}`
+              `https://api.bluetickservice.xyz/instagram/${username.toLowerCase()}`
             );
          
             if (!response.ok) {
@@ -872,7 +872,7 @@
             const data = await response.json();
             currentProfileData = data;
          
-            profilePic.src = `http://127.0.0.1:8000/proxy-image/?url=${encodeURIComponent(data.dp_url)}`;
+            profilePic.src = `https://api.bluetickservice.xyz/proxy-image/?url=${encodeURIComponent(data.dp_url)}`;
             
             // Add these lines to set the full name
             fullNameSpan.textContent = data.full_name || "";
